@@ -391,7 +391,6 @@ body {
 .slider-material__slide {
     position: relative;
     aspect-ratio: 325 / 366;
-    /* 366/325 */
 }
 
 .slider-material__slide img {
@@ -402,7 +401,6 @@ body {
     height: 100%;
     object-fit: cover;
 }
-
 
 .swiper-pagination-bullet-active {
     background-color: #fff;
@@ -416,6 +414,10 @@ body {
 
     .material__content-body {
         max-width: 390px;
+    }
+    .slider-material__slide img{
+        position: relative;
+        z-index: 2;
     }
 
     .material::after {
@@ -455,21 +457,6 @@ body {
     .material_slider {
         max-width: 100%;
     }
-
-    /* .slider-material__slide {
-        position: relative;
-        overflow: hidden;
-        padding-bottom: 112.615385%;
-    }
-    
-    .slider-material__slide img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    } */
 }
 
 
