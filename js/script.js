@@ -22,3 +22,38 @@ const swiper = new Swiper('.slider-material', {
     },
   
   });
+
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      console.log(entry)
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      } 
+      // else {
+      //   entry.target.classList.remove('show');
+      // }
+    });
+  });
+  
+  const hiddenElements = document.querySelectorAll('.hidden');
+  hiddenElements.forEach((el) => observer.observe(el));
+
+  
+
+
+
+  const observerB = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      console.log(entry)
+      if (entry.isIntersecting) {
+        entry.target.classList.add('showb');
+      } 
+      // else {
+      //   entry.target.classList.remove('show');
+      // }
+    });
+  });
+  
+  const hiddenbElements = document.querySelectorAll('.hiddenb');
+  hiddenbElements.forEach((el) => observerB.observe(el));
